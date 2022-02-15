@@ -49,9 +49,16 @@
     <title>Document</title>
 </head>
 <body>
-   <?php for ($i=0; $i < count(array_keys($posts)); $i++) {      
+<?php for ($i=0; $i < count(array_keys($posts)); $i++) {    
             $key=array_keys($posts)[$i];
             $posts[$key];
-        } ?>
+            echo "<h2>" . $key . "</h2>";
+            for ($j=0; $j < count($posts[$key]); $j++) {
+                    $singlePost=$posts[$key][$j]; ?>     
+                <h3><?php echo $singlePost["title"] ?></h3>
+                <h3><?php echo $singlePost["author"] ?></h3>
+                <h3><?php echo $singlePost["text"] ?></h3>
+           <?php  } 
+       } ?> 
 </body>
 </html>
