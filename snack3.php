@@ -38,6 +38,7 @@
             ]
         ],
     ];
+    var_dump(count(array_keys($posts)));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,9 +49,9 @@
     <title>Document</title>
 </head>
 <body>
-   <?php for ($i=0; $i < count($posts); $i++) { ?> 
-            <h3><?php echo array_keys($posts)[$i] ?></h3>
-            <h4><?php echo $posts[array_keys($posts)[$i]][$i]?> </h4>
-  <?php } ?>
+   <?php for ($i=0; $i < count(array_keys($posts)); $i++) {      
+            $key=array_keys($posts)[$i];
+            $posts[$key];
+        } ?>
 </body>
 </html>
